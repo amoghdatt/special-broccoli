@@ -7,14 +7,10 @@
 
 ### Enter x,y co-ordinates one at a time and finally enter 'quit'
 
-#### Time Complexity O(n)
-
 ### Inorder to execute sales-tax program
 - cd sales-tax
 - cd src
 - `python run.py`
 
 ### Enter cart-items one at a time and finally enter 'quit'
-
-#### Time Complexity O(CartItems * ApplicableTaxRules)
 
