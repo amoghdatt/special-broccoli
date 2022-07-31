@@ -1,6 +1,6 @@
 import re
 from src.item import Item
-from src.handlers.billing_handler import BillingHandler
+from src.handlers.invoice_handler import InvoiceHandler
 from src.constants import CONST_IMPORTED
 from src.enums import ItemNameToCategory
 
@@ -14,9 +14,8 @@ class Store:
         cart.add_item(item, quantity)
 
     @classmethod
-    def bill(cls, cart):
-        bill = BillingHandler().generate_bill(cart)
-        bill.print()
+    def invoice(cls, cart):
+        InvoiceHandler().generate_invoice(cart)
 
     @staticmethod
     def fetch_desired_item(desired_item):

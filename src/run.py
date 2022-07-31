@@ -12,4 +12,4 @@ if __name__ == '__main__':
     for desired_cart_item in cart_items:
         Store.build_cart(cart, desired_cart_item)
 
-    Store.bill(cart)
+    Store.invoice(cart)
