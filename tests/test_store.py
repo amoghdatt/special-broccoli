@@ -56,12 +56,12 @@ class TestStore(unittest.TestCase):
         self.assertListEqual([no_of_items, quantity, name, price, is_imported, category], [1,1,'imported box of chocolates',10.00, True, 'Food'])
 
     @unittest.mock.patch('sys.stdout', new_callable=io.StringIO)
-    def test_that_bill_is_successfully_printed(self, mock_stdout):
+    def test_that_invoice_is_successfully_printed(self, mock_stdout):
         cart = Cart()
         sample_desired_item = '1 imported box of chocolates at 10.00'
 
         Store.build_cart(cart, sample_desired_item)
-        Store.bill(cart)
+        Store.invoice(cart)
 
         res = mock_stdout.getvalue()
         self.assertEqual(res, '1 imported box of chocolates: 10.50\nSales Taxes: 0.50\nTotal: 10.50')
