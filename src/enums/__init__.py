@@ -27,7 +27,7 @@ class ItemNameToCategory(Enum):
         'book': Category.BOOK.value,
         'music CD': Category.MUSIC_CD.value,
         'chocolate bar': Category.FOOD.value,
-        'imported box of chocolates': Category.FOOD.value,
-        'imported bottle of perfume': Category.COSMETICS.value,
+        'box of chocolates': Category.FOOD.value,
+        'bottle of perfume':Category.COSMETICS.value,
         'packet of headache pills': Category.MEDICINE.value
     }

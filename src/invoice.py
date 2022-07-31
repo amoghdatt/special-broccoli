@@ -9,7 +9,11 @@ class Invoice:
         for item_detail in self.item_details:
             cart_item  = item_detail[0]
             value_with_tax = item_detail[1]
-            print(f"{cart_item.quantity} {cart_item.item.name}: {value_with_tax:.2f}")
+            
+            if cart_item.item.is_imported:
+                print(f"{cart_item.quantity} {cart_item.item.is_imported} {cart_item.item.name}: {value_with_tax:.2f}")
+            else:
+                print(f"{cart_item.quantity} {cart_item.item.name}: {value_with_tax:.2f}")
 
         print(f"Sales Taxes: {self.total_sales_tax:.2f}\nTotal: {self.total:.2f}",end="")
 
